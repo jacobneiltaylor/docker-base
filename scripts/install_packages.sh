@@ -12,4 +12,5 @@ apt-get -y --no-install-recommends install \
     wget \
     python3-pip \
     lsb-release \
-    ca-certificates
+    ca-certificates \
+    curl

@@ -8,6 +8,7 @@ COPY ./scripts/ /opt/base/bin/
 ENV BASEROOT=/opt/base
 ENV BASEVER=$VERSION
 ENV PATH=$BASEROOT/bin:$PATH
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Update system and install common packages
 RUN apt_pre.sh && install_packages.sh && apt_post.sh

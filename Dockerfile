@@ -2,6 +2,8 @@ ARG VERSION
 
 FROM ubuntu:$VERSION
 
+ARG VERSION
+
 # Set up base root
 RUN mkdir -p /opt/base/bin
 COPY ./scripts/ /opt/base/bin/

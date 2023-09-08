@@ -13,4 +13,5 @@ apt-get -y --no-install-recommends install \
     python3-pip \
     lsb-release \
     ca-certificates \
-    curl
+    curl \
+    rsync

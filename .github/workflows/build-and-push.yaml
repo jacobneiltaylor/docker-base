@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         ubuntu_version:
+          - "23.10"
           - "22.04"
           - "20.04"
     steps:

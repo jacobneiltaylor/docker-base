@@ -13,7 +13,7 @@ ENV PATH=$BASEROOT/bin:$PATH
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update system and install common packages
-RUN apt_pre.sh && install_packages.sh && apt_post.sh && update_pip.sh
+RUN apt_pre.sh && install_packages.sh && apt_post.sh
 
 # Install AWS CLI v2
 RUN install_aws_cli.sh

@@ -1,13 +1,14 @@
 #!/bin/bash
 export GO_VERSION=${1:-"1.21.1"}
 export GO_ROOT=${2:-"/opt/go$GO_VERSION/"}
-export GO_ARCH="amd64"
+export GO_ARCH="arm64"
 export ARCH=$(arch)
 export GOPATH="$GO_ROOT/local"
 export GOBIN="$GO_ROOT/local/bin"
 
-if [[ $ARCH == *"arm"* ]]; then
-  export GO_ARCH="arm64"
+if [ $(arch) = "x86_64" ]
+then
+    export GO_ARCH="amd64"
 fi
 
 mkdir -p $GOBIN
